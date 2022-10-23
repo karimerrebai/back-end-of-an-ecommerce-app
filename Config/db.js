@@ -1,6 +1,5 @@
 const {connect}=require('mongoose')
 const {success,error}=require('consola')
-
 const DB=process.env.APP_DB
 const connectDB =async ()=>{
     try {
@@ -17,4 +16,4 @@ const connectDB =async ()=>{
         connectDB()
     }
 }
-module.exports=connectDB()
+module.exports=connectDB() 

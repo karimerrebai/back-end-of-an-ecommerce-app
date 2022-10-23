@@ -4,7 +4,6 @@ const SECRET = process.env.APP_SECRET;
 checkIden = async (req, res, next) => {
   try {
     const token = req.headers["authorization"];
-
     if (!token) {
       res.status(403).json({
         message: "no token",

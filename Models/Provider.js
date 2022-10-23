@@ -5,18 +5,23 @@ const schemaProvider = new mongoose.Schema({
     matricule: {
         type: String,
         required: true,
-        minlength: 4,
-        trim: true,
+        
+       
     },
     company: {
         type: String,
         required: true,
-        minlength: 3,
+       
     },
     service: {
         type: String,
         required: true,
-        minlength: 4,
+        
+    },
+    product:{
+        type:mongoose.Types.ObjectId,
+        ref:'Product',
+        required:false
     }
 
 }, { timestamps: true }

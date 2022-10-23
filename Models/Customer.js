@@ -9,19 +9,24 @@ const schemaCustomer = new mongoose.Schema(
         address: {
             type: String,
             required: true,
-            minlength: 4,
+           // minlength: 4,
         },
         city: {
             type: String,
             required: true,
-            minlength: 3,
+           // minlength: 3,
         },
         cin: {
             type: Number,
             required: true,
             trim: true,
-            minlength: 7,
-        }
+           // minlength: 7,
+        },
+        orders:[{
+            type:mongoose.Types.ObjectId,
+            ref:'Order',
+            required:false
+        }]
     }, { timestamps: true }
 )
 module.exports = User.discriminator('Customer',schemaCustomer)//methode discriminator : une methode en heritage
