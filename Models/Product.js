@@ -17,9 +17,9 @@ const schemaProduct = new mongoose.Schema(
       required: true,
       trim: true,
     },
-    color:{
-      type : String ,
-      required:true
+    color: {
+      type: String,
+      required: true
     }
     ,
     price: {
